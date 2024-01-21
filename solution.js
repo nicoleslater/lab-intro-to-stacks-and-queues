@@ -21,7 +21,12 @@ dequeue(){
     return "Empty Queue!";
   }
 
-  
+  const currentItem = this.top;
+  this.top = this.top.next;
+  this.size--;
+
+  return currentItem.data;
+
 }
 
 push(data){
