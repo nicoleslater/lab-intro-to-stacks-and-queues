@@ -38,6 +38,10 @@ push(data){
   }
 }
 
+class Queue{
+
+}
+
 module.exports = {
   Node,
   Queue,
