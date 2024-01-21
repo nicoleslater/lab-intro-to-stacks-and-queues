@@ -17,16 +17,21 @@ count(){
 }
 
 dequeue(){
-  if(this.top === null){
-    return "Empty Queue!";
+  if (this.first === null) {
+    return "The Queue is Empty!";
   }
 
-  const currentItem = this.top;
-  this.top = this.top.next;
-  this.size--;
+  let currentFirst = this.first;
+  if (this.first === this.last) {
+    this.first = null;
+    this.last = null;
+} else {
+  this.first = currentFirst.next;
+}
 
-  return currentItem.data;
+this.size--;
 
+return currentFirst.data;
 }
 
 push(data){
@@ -38,8 +43,13 @@ push(data){
   }
 }
 
-class Queue{
-
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+    this.maxValue = Number.MAX_SAFE_INTEGER;
+  }
 }
 
 module.exports = {
