@@ -26,7 +26,7 @@ push(data){
   }
   
   pop(){
-    // return this.top
+    
   }
 
   isEmpty(){
