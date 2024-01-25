@@ -12,6 +12,39 @@ class Stack {
     this.top = null;
   }
 
+
+push(data){
+    const newNode = newNode(data);
+    newNode.next = this.top;
+    this.top = newNode;
+
+    this.size++
+  }
+
+  size(){
+    return this.size;
+  }
+  
+  pop(){
+    // return this.top
+  }
+
+  isEmpty(){
+
+  }
+
+findMin(){
+
+}
+
+peek(){
+
+}
+
+sort(){
+
+}
+
 count(){
   return this.size;
 }
@@ -51,6 +84,7 @@ class Queue {
     this.maxValue = Number.MAX_SAFE_INTEGER;
   }
 }
+
 
 module.exports = {
   Node,
